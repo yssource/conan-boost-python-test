@@ -1,0 +1,42 @@
+# -*- mode:org; epa-file-encrypt-to: ("yssource@163.com"); org-confirm-babel-evaluate: nil -*-
+#+TITLE: Conan Boost Python Test
+#+AUTHOR: Jimmy M. Gong
+#+EMAIL: yssource@163.com
+#+LANGUAGE: zh-Hans
+#+OPTIONS: H:4 num:t toc:t \n:t ::t |:t ^:nil -:nil f:t *:t <:t html-postamble:nil html-preamble:t tex:t
+#+URI: /blog/%y/%m/%d/
+#+DATE: 2018-12-11
+#+LAYOUT: post
+#+TAGS: OFFICE(o) COMPUTER(c) HOME(h) PROJECT(p) READING(r) DVD(d)
+#+CATEGORIES:
+#+DESCRIPTON:
+#+KEYWORDS:
+#+REVEAL_ROOT: file:///home/jimmy/workspace/git/reveal.js/js/
+#+REVEAL_HLEVEL: 2
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: logdone
+#+STARTUP: indent
+
+#+property: header-args :eval no
+#+PROPERTY: header-args :eval never-export
+
+* sub projects
+1. [x] HelloWorld
+2. [x] ExposingClasses
+3. [x] Constructors
+
+* build
+#+name: build
+#+BEGIN_SRC bash :results no
+  rm -rfv ./build
+  conan install . -if ./build --build missing
+  conan build . -bf ./build
+#+END_SRC
+
+* COMMENT Local Variables                                           :ARCHIVE:
+# Local Variables:
+# fill-column: 70
+# eval: (auto-fill-mode 1)
+# org-confirm-babel-evaluate: nil
+# End:
