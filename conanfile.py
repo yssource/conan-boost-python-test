@@ -7,11 +7,18 @@ import os
 
 
 class TestPackageConan(ConanFile):
+    name = "sourcemaking"
+    version = "0.0.0"
+    license = "MIT"
+    author = "Jimmy M. Gong yssource@163.com"
+    url = "https://github.com/yssource/conan-boost-python-test"
+    description = "conan-boost-python-test"
+    topics = ("conan", "boost_python", "test")
     settings = "os", "compiler", "build_type", "arch"
-    generators = "cmake"
-    # options = { "python": "ANY" }
-    default_options = {"python_dev_config:python": "/home/jimmy/.pyenv/versions/anaconda3-5.0.1/envs/devel/bin/python", "boost_python:python_version": "3.6"}
     # options = {"python_dev_config:python": "/home/jimmy/.pyenv/versions/anaconda3-5.0.1/envs/devel/bin/python", "boost_python:python_version": "3.6"}
+    options = {"shared": [True, False], "SIMPLE": [True, False]}
+    default_options = {"python_dev_config:python": "/home/jimmy/.pyenv/versions/anaconda3-5.0.1/envs/devel/bin/python", "boost_python:python_version": "3.6"}
+    generators = "cmake"
 
     def requirements(self):
         self.requires("boost_base/1.67.0@{}/{}".format("bincrafters", "stable"))
