@@ -25,6 +25,7 @@
 1. [x] HelloWorld
 2. [x] ExposingClasses
 3. [x] Constructors
+4. [x] 04-ClassMembers
 
 * build
 #+name: build

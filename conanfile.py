@@ -16,7 +16,6 @@ class TestPackageConan(ConanFile):
     topics = ("conan", "boost_python", "test")
     settings = "os", "compiler", "build_type", "arch"
     # options = {"python_dev_config:python": "/home/jimmy/.pyenv/versions/anaconda3-5.0.1/envs/devel/bin/python", "boost_python:python_version": "3.6"}
-    options = {"shared": [True, False], "SIMPLE": [True, False]}
     default_options = {"python_dev_config:python": "/home/jimmy/.pyenv/versions/anaconda3-5.0.1/envs/devel/bin/python", "boost_python:python_version": "3.6"}
     generators = "cmake"
 
